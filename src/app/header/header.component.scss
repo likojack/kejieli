@@ -52,9 +52,12 @@
 
     .mat-menu-btn {
         color: $font-colour;
-    }
-
-    ::ng-deep .mat-menu-panel-custom {
         background-color: $bg-colour-light;
+        &:nth-child(1) {
+            margin-top:-8px;
+        }
+        &:nth-child(6) {
+            margin-bottom:-8px;
+        }
     }
 }
