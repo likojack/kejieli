@@ -8,6 +8,10 @@
     min-width: 300px;
 
     #profile-pic {
+        background-image: url("../../assets/images/profile.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 300px;
         height: 300px;
         margin: 0 auto;
