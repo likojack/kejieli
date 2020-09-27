@@ -1,0 +1,173 @@
+@import '../../assets/css/variables.scss';
+
+#about-me {
+    position: absolute;
+    background-color: $bg-colour;
+    height: 250px;
+    width: 100vw;
+    min-width: 300px;
+
+    #profile-pic {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 10px solid $font-colour;
+        display: block;
+        top: 80px;
+        position: relative;
+    }
+
+    #about-me-card {
+        margin-top: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50vw;
+        min-width: 300px;
+        text-align: center;
+        #name {
+            font-size: xxx-large;
+        }
+        #title {
+            color: $highlight-grey;
+        }
+        #divider {
+            margin: 30px auto;
+            border-top-color: #1a87cc;
+            border-top-width: 3px;
+            border-top-style: solid;
+            max-width: 300px;
+        }
+        .with-link:hover {
+            color: $highlight-blue;
+            cursor: pointer;
+        }
+        .my-icons {
+            font-size: x-large;
+            transition: all 0.2s ease-in-out;
+        }
+        .my-icons:hover {
+            color: $highlight-blue;
+            // top: -1px;
+            transform: scale(1.1);
+        }
+    }
+    
+}
+
+
+
+/* Timeline */
+#timeline-card {
+    width: 80vw;
+    min-width: 300px;
+    margin: 150px auto;
+    .timeline-group {
+        width: 50%;
+        display: inline-block;
+        text-align: center;
+        font-size: xx-large;
+    }
+    .timeline {
+        list-style: none;
+        padding: 20px;
+        position: relative;
+        &:before {
+            top: 40px;
+            bottom: 0;
+            position: absolute;
+            content: " ";
+            width: 3px;
+            background-color: #eeeeee;
+            left: 50%;
+            margin-left: -1.5px;
+        }
+        .timeline-item {
+            margin-bottom: 20px;
+            position: relative;
+            &:before,
+            &:after {
+            content: "";
+                display: table;
+            }
+            &:after {
+                clear: both;
+            }
+            .timeline-badge {
+                color: #fff;
+                width: 54px;
+                height: 54px;
+                line-height: 52px;
+                font-size: 22px;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+                top: 80px;
+                background-color: $bg-colour;
+                border: 3px solid #ffffff;
+                z-index: 100;
+                border-top-right-radius: 50%;
+                border-top-left-radius: 50%;
+                border-bottom-right-radius: 50%;
+                border-bottom-left-radius: 50%;
+            }
+
+            .timeline-panel-left {
+                position: relative;
+                text-align: right;
+                width: 40%;
+                background: #ffffff;
+                border-radius: 20px;
+                padding: 20px;
+                border: solid 3px $highlight-blue;
+
+                .timeline-title {
+                    font-size: large;
+                    font-weight: bold;
+                    margin-top: 0;
+                    color: inherit;
+                }
+                .timeline-subtitle {
+                    font-style: italic;
+                    font-size: medium;
+                    color: $highlight-grey;
+                }
+                .timeline-time {
+                    float: left;
+                }
+                .timeline-body > p,
+                .timeline-body > ul {
+                    margin-bottom: 0;
+                    list-style-type:disc
+                }
+                .timeline-body > p + p {
+                    margin-top: 5px;
+                }
+            }    
+        }
+        
+        .timeline-panel-right {
+            @extend .timeline-panel-left;
+            float: right;
+            text-align: left !important;
+            .timeline-time {
+                float: right !important;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .timeline-group {
+        display: none !important;
+    }
+    .timeline-badge {
+        position: unset !important;
+    }
+    .timeline-panel-left {
+        width: unset !important;
+        text-align: left !important;
+    }
+}

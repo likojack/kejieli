@@ -1,0 +1,113 @@
+@import '../../assets/css/variables.scss';
+
+#contact-me {
+    position: absolute;
+    background-color: $bg-colour;
+    height: 250px;
+    width: 100vw;
+    min-width: 300px;
+
+    #profile-pic {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 10px solid $font-colour;
+        display: block;
+        top: 80px;
+        position: relative;
+    }
+
+    #contact-me-card {
+        margin-top: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90vw;
+        min-width: 300px;
+        text-align: center;
+        #title {
+            font-size: xxx-large;
+        }
+        #hor-divider {
+            margin: 30px auto;
+            border-top-color: $highlight-blue;
+            border-top-width: 3px;
+            border-top-style: solid;
+            max-width: 300px;
+        }
+        #contact-me-card-details {
+            margin: 100px 0px;
+        }
+        #contact-detail {
+            color: $bg-colour-light;
+            display:inline-block;
+            width: 40%;
+            vertical-align: middle;
+            text-align: left;
+            .contact-detail-row {
+                margin-top: 30px;
+                .contact-detail-heading {
+                    padding-left: 15px;
+                }
+                .contact-detail-content {
+                    padding-left: 30px;
+                    color: grey;
+                }
+            }
+        }
+        #ver-divider {
+            display:inline-block;
+            height: 400px;
+            margin: 0px 50px;
+            vertical-align: middle;
+        }
+        #contact-me-form {
+            display: inline-block;
+            width: 40%;
+            vertical-align: middle;
+            // margin-top: unset !important;
+            #form-heading {
+                text-align: left;
+            }
+            .w-half {
+                width: 49%;
+            }
+
+            .w-full {
+                width: 100%;
+            }
+
+            #send-message {
+                margin-top: 50px;
+                font-size: larger;
+                border: 2px solid $highlight-blue;
+                height: 50px;
+                color: $highlight-blue;
+                transition: all .4s ease-in-out;
+            }
+
+            #send-message:hover {
+                top: -5px;
+                font-weight: bolder;
+                font-size: large;
+            }
+        }
+        
+
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #ver-divider {
+        display: none !important;
+    }
+    #contact-detail {
+        width: 100% !important;
+    }
+    #contact-me-form {
+        width: 100% !important;
+        #form-heading{
+            margin-top: 50px !important;
+        }
+    }
+}

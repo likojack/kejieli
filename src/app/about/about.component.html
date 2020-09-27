@@ -1,0 +1,183 @@
+<div id="about-me">
+    <img id="profile-pic" src="../../assets/img/profile.jpg">
+    <div id="about-me-card" @slide>
+        <h1 id="name"> Kejie Li </h1>
+        <h2 id="title"> PhD Student </h2>
+        <div>
+            <a mat-icon-button class="my-icons" href="mailto:kejie.li@adelaide.ed.au" matTooltip="Email"><fa-icon [icon]="faEnvelope"></fa-icon></a>
+            <button mat-icon-button class="my-icons" (click)="goToLink('../../assets/doc/Kejie_Li_resume.pdf')" matTooltip="CV"><fa-icon [icon]="faIdCard"></fa-icon></button>
+            <button mat-icon-button class="my-icons" (click)="goToLink('https://www.linkedin.com/in/kejie-li-3b8ab4100/')" matTooltip="LinkedIn"><fa-icon [icon]="faLinkedin"></fa-icon></button>
+            <button mat-icon-button class="my-icons" (click)="goToLink('https://scholar.google.com.au/citations?hl=en&user=JBwsoCUAAAAJ')" matTooltip="Google Scholar"><fa-icon [icon]="faGoogle"></fa-icon></button>
+            <button disabled mat-icon-button class="my-icons" (click)="goToLink('')" matTooltip="GitHub"><fa-icon [icon]="faGithub"></fa-icon></button>
+        </div>
+        <mat-divider id="divider"></mat-divider>
+        <h4>I am a PhD student working with <b (click)="goToLink('https://cs.adelaide.edu.au/~ianr/')" class="with-link">Ian Reid</b>
+        at the University of Adelaide. I am also affiliated with <b (click)="goToLink('https://www.roboticvision.org')" class="with-link">Australian Centre for
+        Robotic Vision (ACRV)</b> for my PhD research. I received my Bachelor of Advanced Computing (Honours) at the Australian
+        National University supervised by <b (click)="goToLink('http://users.cecs.anu.edu.au/~sgould/')" class="with-link">Stephen Gould</b>. Prior to that, I did my Bachelor of Computer Science at Shandong
+        University, China. My research focuses on geometry reconstruction (e.g., depth and object shape) from RGB image(s) using
+        deep learning. I am particularly interested in "semantic aware" SLAM system.</h4>
+    </div>
+    <div id="timeline-card" @slide>
+        <div>
+            <h1 class="timeline-group"> Professional Experience </h1>
+            <h1  class="timeline-group"> Education </h1>
+        </div>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="timeline-badge">
+                    <fa-icon [icon]="faFacebook" style="font-size: xx-large;"></fa-icon>
+                </div>
+                <div class="timeline-panel-left">
+                    <div class="timeline-heading">
+                        <p>
+                            <span class="timeline-time">September 2019 - February 2020</span>
+                            <span class="timeline-title">Research Intern</span>
+                        </p>
+                        <p class="timeline-subtitle">Facebook Reality Lab</p>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Publication to be disclosed</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-badge">
+                    <fa-icon [icon]="faBriefcase" style="font-size: x-large;"></fa-icon>
+                </div>
+                <div class="timeline-panel-left">
+                    <div class="timeline-heading">
+                        <p>
+                            <span class="timeline-time">February 2019 - July 2019</span>
+                            <span class="timeline-title">Teaching Assistant</span>
+                        </p>
+                        <p class="timeline-subtitle">University of Adelaide</p>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Tutoring for Foundation of Copmuter Science (FCS). Responsible for teaching Object Oriented
+                        Programming and demonstrating programming in small groups.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-badge">
+                    <fa-icon [icon]="faGraduationCap" style="font-size: x-large;"></fa-icon>
+                </div>
+                <div class="timeline-panel-right">
+                    <div class="timeline-heading">
+                        <p>
+                            <span class="timeline-time">February 2017 - Present</span>
+                            <span class="timeline-title">Doctor of Philosophy</span>
+                        </p>
+                        <p class="timeline-subtitle">University of Adelaide</p>
+                    </div>
+                    <div class="timeline-body">
+                        <p>My PhD topic is object oriented Simultaneous Localization and Mapping (SLAM) with deep learning.
+                        The proposed object SLAM incorporates deep learning to reconstruct the environment at the object level
+                        so that the SLAM system can not only densely reconstruct the geometry structure of its surrounding like
+                        traditional dense SLAM does, but also parse the environment semantically, so that it can understand
+                        the environment like our human beings.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-badge">
+                    <fa-icon [icon]="faBriefcase" style="font-size: x-large;"></fa-icon>
+                </div>
+                <div class="timeline-panel-left">
+                    <div class="timeline-heading">
+                        <p>
+                            <span class="timeline-time">July 2016 - Octobor 2016</span>
+                            <span class="timeline-title">Teaching Assistant</span>
+                        </p>
+                        <p class="timeline-subtitle">the Austrlian National University</p>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Tutoring for COMP6730: Programming for Scientists, a python programming course for students from
+                        various disciplines.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-badge">
+                    <fa-icon [icon]="faBriefcase" style="font-size: x-large;"></fa-icon>
+                </div>
+                <div class="timeline-panel-left">
+                    <div class="timeline-heading">
+                        <p>
+                            <span class="timeline-time">January 2016 - March 2016</span>
+                            <span class="timeline-title">Software Developer</span>
+                        </p>
+                        <p class="timeline-subtitle">the Austrlian National University</p>
+                    </div>
+                    <div class="timeline-body">
+                        <p>In this project, I worked under Dr. David Heslop. We have developed a standalone Bayesian Principal
+                            Component Analysis tool in Matlab for geologists to estimate the direction of line to a sequence of
+                            demagnetisation data for an individual specimen.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-badge">
+                    <fa-icon [icon]="faBriefcase" style="font-size: x-large;"></fa-icon>
+                </div>
+                <div class="timeline-panel-left">
+                    <div class="timeline-heading">
+                        <p>
+                            <span class="timeline-time">November 2015 - May 2016</span>
+                            <span class="timeline-title">Research Assistant</span>
+                        </p>
+                        <p class="timeline-subtitle">the Austrlian National University and Data61</p>
+                    </div>
+                    <div class="timeline-body">
+                        <p>I was supervised by Dr. Norman Warthmann and Dr. Christfried Webers in this project. We tried
+                        to design a new data structure to store DNA sequence more efficiently where we applied unsupervised
+                        learning framework such as autoencoder to help biologists analyzing the information of DNA.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-badge">
+                    <fa-icon [icon]="faGraduationCap" style="font-size: x-large;"></fa-icon>
+                </div>
+                <div class="timeline-panel-right">
+                    <div class="timeline-heading">
+                        <p>
+                            <span class="timeline-time">July 2014 - July 2016</span>
+                            <span class="timeline-title">Bachelor of Advanced Computing (Honours)</span>
+                        </p>
+                        <p class="timeline-subtitle">the Australian National University</p>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li>First Class Honours</li>
+                            <li>Thesis: Improved CNN Regression Model for Depth Estimation from a Single Image</li>
+                            <li>Award: International University Partnership Award, 2014</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-badge">
+                    <fa-icon [icon]="faGraduationCap" style="font-size: x-large;"></fa-icon>
+                </div>
+                <div class="timeline-panel-right">
+                    <div class="timeline-heading">
+                        <p>
+                            <span class="timeline-time">September 2012 - July 2014</span>
+                            <span class="timeline-title">Bachelor of Computer Science</span>
+                        </p>
+                        <p class="timeline-subtitle">Shandong University, China</p>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li>Avg Grade 91</li>
+                            <li>Award: 2 times First Class National Scholarship, 2012-2014</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+

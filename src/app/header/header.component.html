@@ -1,0 +1,19 @@
+<mat-toolbar class="nav">
+    <span>KEJIE LI <b class="dot">.</b></span>
+    <span class="spacer"></span>
+    <button mat-icon-button class="nav-btn" [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+    <mat-menu overlayPanelClass="mat-menu-panel" #menu="matMenu">
+        <button mat-menu-item class="mat-menu-btn" (click)="navigateTo('home')"> HOME </button>
+        <button mat-menu-item class="mat-menu-btn" (click)="navigateTo('about')"> ABOUT ME </button>
+        <button mat-menu-item class="mat-menu-btn" (click)="navigateTo('news')"> NEWS </button>
+        <button mat-menu-item class="mat-menu-btn" (click)="navigateTo('publications')"> PUBLICATIONS </button>
+        <button mat-menu-item class="mat-menu-btn" (click)="navigateTo('professional-activities')"> PROFESSIONAL ACTIVITIES </button>
+        <button mat-menu-item class="mat-menu-btn" (click)="navigateTo('contact')"> CONTACT ME</button>
+    </mat-menu>
+    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'home'" (click)="navigateTo('home')"> HOME </button>
+    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'about'" (click)="navigateTo('about')"> ABOUT ME </button>
+    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'news'" (click)="navigateTo('news')"> NEWS </button>
+    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'publications'" (click)="navigateTo('publications')"> PUBLICATIONS </button>
+    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'professional-activities'" (click)="navigateTo('professional-activities')"> PROFESSIONAL ACTIVITIES </button>
+    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'contact'" (click)="navigateTo('contact')"> CONTACT ME</button>
+</mat-toolbar>

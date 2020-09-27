@@ -1,0 +1,60 @@
+@import '../../assets/css/variables.scss';
+
+.nav {
+    background: $bg-colour;
+    color: $font-colour;
+    min-width: 300px;
+    position: fixed;
+    z-index: 999;
+}
+.dot {
+    font-size: xx-large;
+    color: $highlight-blue;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.menu-btn {
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+.menu-btn:hover {
+    top: -5px;
+    font-weight: bolder;
+    transform: scale(1.1);
+}
+
+.underline {
+    .mat-button-wrapper {
+        border-bottom: 3px solid $highlight-blue;
+    }
+}
+
+.nav-btn {
+    display: none !important;
+}
+
+
+@media screen and (max-width: 800px) {
+    .menu-btn {
+        display: none !important;
+    }
+    .nav-btn {
+        display: unset !important;
+    }
+
+    .mat-menu-btn:hover {
+        background-color: $highlight-blue !important;
+    }
+
+    .mat-menu-btn {
+        color: $font-colour;
+    }
+
+    .mat-menu-panel {
+        background-color: $bg-colour-light;
+    }
+}

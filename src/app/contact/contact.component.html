@@ -1,0 +1,64 @@
+<div id="contact-me">
+    <img id="profile-pic" src="../../assets/img/profile.jpg">
+    <div id="contact-me-card" @slide>
+        <h1 id="title"> Contact Me </h1>
+        <mat-divider id="hor-divider"></mat-divider>
+        <div id="contact-me-card-details">
+            <div id="contact-detail">
+                <h1> Feel free to contact me if you got any questions...</h1>
+                <h3> Send me a message via any of the following platforms or fill out the contact form here. 
+                    I'll get back to you as soon as I can. <fa-icon [icon]="faLaughBeam"></fa-icon></h3>
+                <div class="contact-detail-row">
+                    <h2><fa-icon [icon]="faMapMarkerAlt"></fa-icon><span class="contact-detail-heading">Location</span></h2>
+                    <h3 class="contact-detail-content">Adelaide, Australia</h3>
+                </div>
+                <div class="contact-detail-row">
+                    <h2><fa-icon [icon]="faEnvelope"></fa-icon><span class="contact-detail-heading">Email</span></h2>
+                    <h3 class="contact-detail-content pointer"><a href="mailto:kejie.li@adelaide.ed.au" style="color: inherit; text-decoration: inherit;">kejie.li@adelaide.ed.au</a></h3>
+                    <h3 class="contact-detail-content pointer"><a href="mailto:kejie.li@outlook.com" style="color: inherit; text-decoration: inherit;">kejie.li@outlook.com</a></h3>
+                </div>
+                <div class="contact-detail-row">
+                    <h2><fa-icon [icon]="faLinkedin"></fa-icon><span class="contact-detail-heading">LinkedIn</span></h2>
+                    <h3 class="contact-detail-content pointer" (click)="goToLink('https://www.linkedin.com/in/kejie-li-3b8ab4100/')">https://www.linkedin.com/in/kejie-li-3b8ab4100/</h3>
+                </div>
+            </div>
+            <mat-divider vertical id="ver-divider"></mat-divider>
+            <div id="contact-me-form">
+                <form [formGroup]="contactForm">
+                    <h1 id="form-heading"> Message Me Here</h1>
+                    <mat-form-field appearance="outline" class="w-half left">
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="First Name" required [formControl]="firstName">
+                        <mat-error *ngIf="firstName.invalid">{{getErrorMessage('firstName')}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="w-half right">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="Last Name" required [formControl]="lastName">
+                        <mat-error *ngIf="lastName.invalid">{{getErrorMessage('lastName')}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label>Your Email Address</mat-label>
+                        <input matInput placeholder="Email" required [formControl]="email">
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage('email')}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label>Subject</mat-label>
+                        <input matInput placeholder="Subject" required [formControl]="subject">
+                        <mat-error *ngIf="subject.invalid">{{getErrorMessage('subject')}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label>Message</mat-label>
+                        <textarea matInput placeholder="Message" required style="min-height: 100px;"
+                            [formControl]="message"></textarea>
+                        <mat-error *ngIf="message.invalid">{{getErrorMessage('message')}}</mat-error>
+                    </mat-form-field>
+                    <button type="button" mat-button id="send-message" (click)="sendMessage()" class="w-full">
+                        Send via Email
+                        <fa-icon [icon]="faPaperPlane"></fa-icon>
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
