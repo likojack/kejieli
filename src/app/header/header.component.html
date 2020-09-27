@@ -10,10 +10,10 @@
         <button mat-menu-item class="mat-menu-btn" (click)="navigateTo('professional-activities')"> PROFESSIONAL ACTIVITIES </button>
         <button mat-menu-item class="mat-menu-btn" (click)="navigateTo('contact')"> CONTACT ME</button>
     </mat-menu>
-    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'home'" (click)="navigateTo('home')"> HOME </button>
-    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'about'" (click)="navigateTo('about')"> ABOUT ME </button>
-    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'news'" (click)="navigateTo('news')"> NEWS </button>
-    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'publications'" (click)="navigateTo('publications')"> PUBLICATIONS </button>
-    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'professional-activities'" (click)="navigateTo('professional-activities')"> PROFESSIONAL ACTIVITIES </button>
-    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'contact'" (click)="navigateTo('contact')"> CONTACT ME</button>
+    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'home'" (click)="navigateTo('home')"><span class="menu-btn-text"> HOME </span></button>
+    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'about'" (click)="navigateTo('about')"><span class="menu-btn-text"> ABOUT ME </span></button>
+    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'news'" (click)="navigateTo('news')"><span class="menu-btn-text"> NEWS </span></button>
+    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'publications'" (click)="navigateTo('publications')"><span class="menu-btn-text"> PUBLICATIONS </span></button>
+    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'professional-activities'" (click)="navigateTo('professional-activities')"><span class="menu-btn-text"> PROFESSIONAL ACTIVITIES </span></button>
+    <button mat-button [disableRipple]="true" class="menu-btn" [class.underline]="currentTab === 'contact'" (click)="navigateTo('contact')"><span class="menu-btn-text"> CONTACT ME</span></button>
 </mat-toolbar>
