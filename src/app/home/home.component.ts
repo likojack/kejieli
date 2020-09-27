@@ -5,7 +5,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+  // encapsulation: ViewEncapsulation.None,
   animations: [
     trigger('slide', [
       transition('void => *', [
