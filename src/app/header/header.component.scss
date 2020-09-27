@@ -54,7 +54,7 @@
         color: $font-colour;
     }
 
-    .mat-menu-panel {
+    ::ng-deep .mat-menu-panel-custom {
         background-color: $bg-colour-light;
     }
 }

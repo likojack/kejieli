@@ -2,7 +2,7 @@
     <span>KEJIE LI <b class="dot">.</b></span>
     <span class="spacer"></span>
     <button mat-icon-button class="nav-btn" [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
-    <mat-menu overlayPanelClass="mat-menu-panel" #menu="matMenu">
+    <mat-menu class="mat-menu-panel-custom" #menu="matMenu">
         <button mat-menu-item class="mat-menu-btn" (click)="navigateTo('home')"> HOME </button>
         <button mat-menu-item class="mat-menu-btn" (click)="navigateTo('about')"> ABOUT ME </button>
         <button mat-menu-item class="mat-menu-btn" (click)="navigateTo('news')"> NEWS </button>
