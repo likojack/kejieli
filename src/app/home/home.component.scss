@@ -1,5 +1,6 @@
 @import '../../assets/css/variables.scss';
 .bg-img {
+  display: inline-block;
   background-image: url("../../assets/images/Home_S.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -71,14 +72,21 @@
 @media screen and (max-width: 1300px) {
     #intro {
         left: unset;
-        right: 0px;
+        right: 10px;
     }
 }
 
 @media screen and (max-width: 500px) {
     #intro {
         left: 10px;
-        right: unset;
+        right: 10px;
         width: unset;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    #intro {
+        top: unset !important;
+        bottom: 50px;
     }
 }
