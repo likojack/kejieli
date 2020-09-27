@@ -5,7 +5,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
-  position: absolute;
+  position: fixed;
+  overflow: hidden;
   top: 64px;
   height: calc(100vh - 64px);
   width: 100vw;
