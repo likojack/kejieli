@@ -1,62 +1,38 @@
 @import '../../assets/css/variables.scss';
 
-#about-me {
-    position: absolute;
-    background-color: $bg-colour;
-    height: 250px;
-    width: 100vw;
+#about-me-card {
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
     min-width: 300px;
-
-    #profile-pic {
-        background-image: url("../../assets/images/profile.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 300px;
-        height: 300px;
-        margin: 0 auto;
-        border-radius: 50%;
-        border: 10px solid $font-colour;
-        display: block;
-        top: 80px;
-        position: relative;
+    text-align: center;
+    #name {
+        font-size: xxx-large;
     }
-
-    #about-me-card {
-        margin-top: 120px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50vw;
-        min-width: 300px;
-        text-align: center;
-        #name {
-            font-size: xxx-large;
-        }
-        #title {
-            color: $highlight-grey;
-        }
-        #divider {
-            margin: 30px auto;
-            border-top-color: #1a87cc;
-            border-top-width: 3px;
-            border-top-style: solid;
-            max-width: 300px;
-        }
-        .with-link:hover {
-            color: $highlight-blue;
-            cursor: pointer;
-        }
-        .my-icons {
-            font-size: x-large;
-            transition: all 0.2s ease-in-out;
-        }
-        .my-icons:hover {
-            color: $highlight-blue;
-            // top: -1px;
-            transform: scale(1.1);
-        }
+    #title {
+        color: $highlight-grey;
     }
-    
+    #divider {
+        margin: 30px auto;
+        border-top-color: #1a87cc;
+        border-top-width: 3px;
+        border-top-style: solid;
+        max-width: 300px;
+    }
+    .with-link:hover {
+        color: $highlight-blue;
+        cursor: pointer;
+    }
+    .my-icons {
+        font-size: x-large;
+        transition: all 0.2s ease-in-out;
+    }
+    .my-icons:hover {
+        color: $highlight-blue;
+        // top: -1px;
+        transform: scale(1.1);
+    }
 }
 
 
