@@ -1,4 +1,4 @@
-@import '../../assets/css/variables.scss';
+@import "variables.scss";
 
 .nav {
     background: $bg-colour;
@@ -10,10 +10,6 @@
 .dot {
     font-size: xx-large;
     color: $highlight-blue;
-}
-
-.spacer {
-    flex: 1 1 auto;
 }
 
 .menu-btn {

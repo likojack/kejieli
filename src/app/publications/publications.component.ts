@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import Constants from '../Constants';
+import { IPublicationCardsConfig } from './publication-cards/publication-cards.component';
 @Component({
   selector: 'app-publications',
   templateUrl: './publications.component.html',
@@ -18,7 +19,8 @@ import Constants from '../Constants';
   ]
 })
 export class PublicationsComponent implements OnInit {
-  public paper1 = {
+  public paper1: IPublicationCardsConfig = {
+    cardId: 'paper1',
     imgUrl: '/kejieli/assets/images/CVPR2020.png',
     title: 'FroDO: From Detections to 3D Objects',
     subtitle: 'Computer Vision and Pattern Recognition (CVPR), 2020',
@@ -50,7 +52,8 @@ export class PublicationsComponent implements OnInit {
     downloadLink: 'https://arxiv.org/pdf/2005.05125.pdf'
   };
 
-  public paper2 = {
+  public paper2: IPublicationCardsConfig = {
+    cardId: 'paper2',
     imgUrl: '/kejieli/assets/images/BMVC2019.png',
     title: 'Single-view Object Shape Reconstruction Using Deep Shape Prior and Silhouette',
     subtitle: 'British Machine Vision Conference (BMVC), 2019 ',
@@ -67,7 +70,8 @@ export class PublicationsComponent implements OnInit {
     downloadLink: 'https://arxiv.org/pdf/1811.11921.pdf'
   };
 
-  public paper3 = {
+  public paper3: IPublicationCardsConfig = {
+    cardId: 'paper3',
     imgUrl: '/kejieli/assets/images/ICRA2019.png',
     title: 'Real-Time Monocular Object-Model Aware Sparse SLAM',
     subtitle: 'International Conference on Robotics and Automation (ICRA) , 2019',
@@ -86,7 +90,8 @@ export class PublicationsComponent implements OnInit {
     downloadLink: 'https://arxiv.org/pdf/1809.09149.pdf'
   };
 
-  public paper4 = {
+  public paper4: IPublicationCardsConfig = {
+    cardId: 'paper4',
     imgUrl: '/kejieli/assets/images/ECCV2018.png',
     title: 'Efficient Dense Point Cloud Object Reconstruction using Deformation Vector Fields',
     subtitle: 'European Conference on Computer Vision (ECCV) , 2018',
@@ -103,13 +108,14 @@ export class PublicationsComponent implements OnInit {
     learnMoreLink: 'https://openaccess.thecvf.com/content_ECCV_2018/html/Kejie_Li_Efficient_Dense_Point_ECCV_2018_paper.html',
     downloadLink: 'https://openaccess.thecvf.com/content_ECCV_2018/papers/Kejie_Li_Efficient_Dense_Point_ECCV_2018_paper.pdf'
   };
-  public paper5 = {
+  public paper5: IPublicationCardsConfig = {
+    cardId: 'paper5',
     imgUrl: '/kejieli/assets/images/CVPR2018.png',
     title: 'Unsupervised Learning of Monocular Depth Estimation and Visual Odometry with Deep Feature Reconstruction',
     subtitle: 'Computer Vision and Pattern Recognition (CVPR), 2018',
     authors: [
       Constants.HUANGYING_ZHAN, Constants.RAVI_GARG, Constants.SAROJ,
-      { self: true, name: 'Kejie Li' }, Constants.HARSH_AGARWAL, Constants.IAN_REID
+      { self: true, name: 'Kejie Li' }, Constants.HARSH_AGARWAL, Constants.IAN_REID,
     ],
     content: `Despite learning based methods showing promising results in single view depth estimation and visual odometry, most
               existing approaches treat the tasks in a supervised manner. Recent approaches to single view depth estimation explore

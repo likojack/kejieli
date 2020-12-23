@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+@import "variables.scss";
+@include mat-core();
+
+// $my-app-primary: mat-palette($mat-blue, 700, 800, A400);
+// $my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+// $my-app-warn:    mat-palette($mat-deep-orange);
+// $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+// @include angular-material-theme($my-app-theme);
+
+$custom-typography: mat-typography-config(
+  $font-family: $font-family
+);
+@include mat-core($custom-typography);

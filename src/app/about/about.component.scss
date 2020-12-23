@@ -1,4 +1,4 @@
-@import '../../assets/css/variables.scss';
+@import "variables.scss";
 
 #about-me-card {
     margin-top: 120px;
@@ -15,7 +15,7 @@
     }
     #divider {
         margin: 30px auto;
-        border-top-color: #1a87cc;
+        border-top-color: $highlight-blue;
         border-top-width: 3px;
         border-top-style: solid;
         max-width: 300px;
@@ -74,7 +74,7 @@
                 clear: both;
             }
             .timeline-badge {
-                color: #fff;
+                color: white;
                 width: 54px;
                 height: 54px;
                 line-height: 52px;
@@ -85,7 +85,7 @@
                 position: relative;
                 top: 80px;
                 background-color: $bg-colour;
-                border: 3px solid #ffffff;
+                border: 3px solid white;
                 z-index: 100;
                 border-top-right-radius: 50%;
                 border-top-left-radius: 50%;
@@ -97,7 +97,7 @@
                 position: relative;
                 text-align: right;
                 width: 40%;
-                background: #ffffff;
+                background: white;
                 border-radius: 20px;
                 padding: 20px;
                 border: solid 3px $highlight-blue;

@@ -6,14 +6,14 @@
         <mat-card-subtitle>{{cardConfig.subtitle}}</mat-card-subtitle>
         <mat-card-subtitle class="author">
             <ng-container *ngFor="let author of cardConfig.authors">
-                <span (click)="goToLink(author.link)" [class.with-link]="author.link" [style.fontWeight]="author.self ? 900 : 100">
+                <span (click)="goToLink(author.link)" [class.with-link]="author.link" [style.fontWeight]="author.self ? 900 : 500">
                     {{author.name}}
                 </span>
                 <span class="comma">,</span>
             </ng-container>
         </mat-card-subtitle>
     </mat-card-header>
-    <mat-card-content class="card-content pointer" (click)="showMoreInfo($event)">
+    <mat-card-content class="card-content pointer" (click)="showMoreInfo($event)" [id]="cardConfig.cardId">
         <p>{{cardConfig.content}}</p>
     </mat-card-content>
     <mat-card-actions class="card-actions">

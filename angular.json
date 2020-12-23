@@ -28,9 +28,18 @@
               "src/assets",
               "src/kejieli"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                ".",
+                "./node_modules",
+                "src"
+              ]
+            },
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/variables.scss",
+              "src/themes.scss"
             ],
             "scripts": []
           },
@@ -93,9 +102,18 @@
               "src/assets",
               "src/kejieli"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                ".",
+                "./node_modules",
+                "src"
+              ]
+            },
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/variables.scss",
+              "src/themes.scss"
             ],
             "scripts": []
           }
