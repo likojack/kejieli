@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,23 +6,12 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit, AfterViewInit {
+export class HeaderComponent implements OnInit {
   public currentTab = 'home';
 
   constructor( private router: Router) { }
 
   ngOnInit(): void {
-  }
-
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.currentTab = this.router.url.slice(1);
-    }, 100);
-  }
-
-  navigateTo(pageName: string): void {
-    this.router.navigate([pageName]);
-    this.currentTab = pageName;
   }
 
 }
