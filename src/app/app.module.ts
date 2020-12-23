@@ -14,6 +14,7 @@ import { ProfessionalActivitiesComponent } from './professional-activities/profe
 import { ContactComponent } from './contact/contact.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PublicationCardsComponent } from './publications/publication-cards/publication-cards.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NewsComponent,
     PublicationsComponent,
     ProfessionalActivitiesComponent,
-    ContactComponent
+    ContactComponent,
+    PublicationCardsComponent
   ],
   imports: [
     BrowserModule,

@@ -26,95 +26,12 @@
     justify-content: space-evenly;
     align-content: space-around;
     align-items: flex-start;
-    .publications-card {
+    app-publication-cards {
         width: 25%;
         min-width: 300px;
         margin: 50px 0px;
         border: 2px solid $highlight-grey;
         border-radius: 10px;
         box-shadow: 10px 10px 5px 0px rgba(168,168,168,1);
-        .card-img {
-            margin: 10px 0px !important;
-            width: 100%;
-        }
-        .hor-divider-card {
-            margin: 30px auto;
-            border-top-color: $highlight-blue;
-            border-top-width: 3px;
-            border-top-style: solid;
-            max-width: 400px;
-            position: unset;
-            left: unset;
-            width: unset;
-        }
-        .card-header {
-            margin-top: 20px;
-            text-align: left;
-            .author {
-                color: $bg-colour;
-                font-style: italic;
-                font-size: small;
-                font-weight: lighter;
-            }
-        }
-        .show-more {
-            max-height: unset !important; 
-            &:before {
-                content: unset !important; 
-            }
-        }
-        /* styles for '...' */ 
-        .card-content {
-            /* hide text if it more than N lines  */
-            overflow: hidden;
-            /* for set '...' in absolute position */
-            position: relative; 
-            /* use this value to count block height */
-            line-height: 1.22em;
-            /* max-height = line-height (1.2) * lines max number (5) */
-            max-height: 6em; 
-            /* fix problem when last visible word doesn't adjoin right side  */
-            text-align: justify;  
-            /* place for '...' */
-            margin: 0px 20px;
-            padding-right: 1em;
-        }
-        /* create the ... */
-        .card-content:before {
-            /* points in the end */
-            content: '...';
-            /* absolute position */
-            position: absolute;
-            /* set position to right bottom corner of block */
-            right: 0;
-            bottom: 0;
-        }
-        /* hide ... if we have text, which is less than or equal to max lines */
-        .card-content:after {
-            /* points in the end */
-            content: '';
-            /* absolute position */
-            position: absolute;
-            /* set position to right bottom corner of text */
-            right: 0;
-            /* set width and height */
-            width: 1em;
-            height: 1em;
-            margin-top: 0.2em;
-            /* bg color = bg color under block */
-            background: white;
-        }
-        .card-actions {
-            margin: 10px 0px;
-            text-align: right;
-            color: $highlight-blue;
-            button {
-                font-size: medium;
-            }
-        }
-        .with-link:hover {
-            color: $highlight-blue;
-            cursor: pointer;
-        }
     }
 }
