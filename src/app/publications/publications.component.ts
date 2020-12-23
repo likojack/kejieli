@@ -18,6 +18,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class PublicationsComponent implements OnInit {
+  public showMore = false;
 
   constructor() { }
 
@@ -26,5 +27,10 @@ export class PublicationsComponent implements OnInit {
 
   goToLink(url: string): void {
     window.open(url, '_blank');
+  }
+
+  public showMoreInfo(event): void {
+    const targetId = event?.currentTarget?.id;
+    document.getElementById(targetId).classList.toggle('show-more');
   }
 }

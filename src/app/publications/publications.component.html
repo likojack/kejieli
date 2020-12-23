@@ -14,23 +14,17 @@
                 <mat-card-subtitle class="author"><b>Kejie Li *, </b>
                     <span class="with-link" (click)="goToLink('https://www.martinruenz.de/')">Martin Rünz *, </span>
                     <span class="with-link" (click)="goToLink('http://mengtang.org/')">Meng Tang, </span>
-                    <span class="with-link"
-                        (click)="goToLink('https://scholar.google.nl/citations?user=eUAgpwkAAAAJ&hl=en')">Lingni Ma, </span>
+                    <span class="with-link" (click)="goToLink('https://scholar.google.nl/citations?user=eUAgpwkAAAAJ&hl=en')">Lingni Ma, </span>
                     <span class="with-link" (click)="goToLink('http://www.cs.cmu.edu/~chenk/')">Chen Kong, </span>
                     <span class="with-link" (click)="goToLink('https://tschmidt23.github.io/')">Tanner Schmidt, </span>
                     <span class="with-link" (click)="goToLink('https://cs.adelaide.edu.au/~ianr/')">Ian Reid, </span>
-                    <span class="with-link" (click)="goToLink('http://www0.cs.ucl.ac.uk/staff/L.Agapito/')">Lourdes Agapito,
-                    </span>
-                    <span class="with-link" (click)="goToLink('http://people.csail.mit.edu/jstraub/')">Julian Straub,</span>
-                    <span class="with-link"
-                        (click)="goToLink('https://scholar.google.com/citations?user=JVum8voAAAAJ&hl=en')">Steven Lovegrove,
-                    </span>
-                    <span class="with-link"
-                        (click)="goToLink('https://scholar.google.co.uk/citations?user=MhowvPkAAAAJ&hl=en')">Richard
-                        Newcombe </span>
+                    <span class="with-link" (click)="goToLink('http://www0.cs.ucl.ac.uk/staff/L.Agapito/')">Lourdes Agapito, </span>
+                    <span class="with-link" (click)="goToLink('http://people.csail.mit.edu/jstraub/')">Julian Straub, </span>
+                    <span class="with-link" (click)="goToLink('https://scholar.google.com/citations?user=JVum8voAAAAJ&hl=en')">Steven Lovegrove, </span>
+                    <span class="with-link" (click)="goToLink('https://scholar.google.co.uk/citations?user=MhowvPkAAAAJ&hl=en')">Richard Newcombe </span>
                 </mat-card-subtitle>
             </mat-card-header>
-            <mat-card-content class="card-content">
+            <mat-card-content class="card-content pointer" (click)="showMoreInfo($event)" id="card2">
                 <p>Object-oriented maps are important for scene understanding since they jointly capture geometry and
                     semantics, allow
                     individual instantiation and meaningful reasoning about objects. We introduce FroDO, a method for
@@ -74,7 +68,7 @@
                     <span class="with-link" (click)="goToLink('https://cs.adelaide.edu.au/~ianr/')">Ian Reid </span>
                 </mat-card-subtitle>
             </mat-card-header>
-            <mat-card-content class="card-content">
+            <mat-card-content class="card-content pointer" (click)="showMoreInfo($event)" id="card3">
                 <p>3D shape reconstruction from a single image is a highly ill-posed problem. Modern deep learning based
                     systems try to solve this problem by learning an end-to-end mapping from image to shape via a deep network. In this
                     paper, we aim to solve this problem via an online optimization framework inspired by traditional methods. Our framework
@@ -98,13 +92,13 @@
                 </mat-card-title>
                 <mat-card-subtitle>International Conference on Robotics and Automation (ICRA) , 2019</mat-card-subtitle>
                 <mat-card-subtitle class="author">
-                    <span class="with-link" (click)="goToLink('https://www.roboticvision.org/rv_person/mehdi-hosseinzadeh/')">Mehdi Hosseinzadeh,</span>
+                    <span class="with-link" (click)="goToLink('https://www.roboticvision.org/rv_person/mehdi-hosseinzadeh/')">Mehdi Hosseinzadeh, </span>
                     <b>Kejie Li, </b>
                     <span class="with-link" (click)="goToLink('http://ylatif.github.io/')">Yasir Latif, </span>
                     <span class="with-link" (click)="goToLink('https://cs.adelaide.edu.au/~ianr/')">Ian Reid </span>
                 </mat-card-subtitle>
             </mat-card-header>
-            <mat-card-content class="card-content">
+            <mat-card-content class="card-content pointer" (click)="showMoreInfo($event)" id="card4">
                 <p>Simultaneous Localization And Mapping (SLAM) is a fundamental problem in mobile robotics. While sparse point-based SLAM
                 methods provide accurate camera localization, the generated maps lack semantic information. On the other hand, state of
                 the art object detection methods provide rich information about entities present in the scene from a single image. This
@@ -135,7 +129,7 @@
                     <span class="with-link" (click)="goToLink('https://cs.adelaide.edu.au/~ianr/')">Ian Reid</span>
                 </mat-card-subtitle>
             </mat-card-header>
-            <mat-card-content class="card-content">
+            <mat-card-content class="card-content pointer" (click)="showMoreInfo($event)" id="card5">
                 <p>Some existing CNN-based methods for single-view 3D object reconstruction represent a 3D object as either a 3D voxel
                 occupancy grid or multiple depth-mask image pairs. However, these representations are inefficient since empty voxels or
                 background pixels are wasteful. We propose a novel approach that addresses this limitation by replacing masks with
@@ -168,7 +162,7 @@
                     <span class="with-link" (click)="goToLink('https://cs.adelaide.edu.au/~ianr/')">Ian Reid </span>
                 </mat-card-subtitle>
             </mat-card-header>
-            <mat-card-content class="card-content">
+            <mat-card-content class="card-content pointer" (click)="showMoreInfo($event)" id="card1">
                 <p>Despite learning based methods showing promising results in single view depth estimation and visual odometry, most
                 existing approaches treat the tasks in a supervised manner. Recent approaches to single view depth estimation explore
                 the possibility of learning without full supervision via minimizing photometric error. In this paper, we explore the use
