@@ -73,6 +73,11 @@
             margin-bottom: 10px !important;
         }
     }
+
+    .active{
+        font-weight: 900 !important;
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: $mob-width) {

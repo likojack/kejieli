@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import Constants from '../Constants';
 import { IPublicationCardsConfig } from './publication-cards/publication-cards.component';
@@ -18,9 +18,9 @@ import { IPublicationCardsConfig } from './publication-cards/publication-cards.c
     ])
   ]
 })
-export class PublicationsComponent implements OnInit {
+export class PublicationsComponent implements OnInit, OnDestroy, AfterViewInit {
   public paper1: IPublicationCardsConfig = {
-    cardId: 'paper1',
+    paperId: 'paper1',
     imgUrl: '/kejieli/assets/images/CVPR2020.png',
     title: 'FroDO: From Detections to 3D Objects',
     subtitle: 'Computer Vision and Pattern Recognition (CVPR), 2020',
@@ -53,7 +53,7 @@ export class PublicationsComponent implements OnInit {
   };
 
   public paper2: IPublicationCardsConfig = {
-    cardId: 'paper2',
+    paperId: 'paper2',
     imgUrl: '/kejieli/assets/images/BMVC2019.png',
     title: 'Single-view Object Shape Reconstruction Using Deep Shape Prior and Silhouette',
     subtitle: 'British Machine Vision Conference (BMVC), 2019 ',
@@ -71,7 +71,7 @@ export class PublicationsComponent implements OnInit {
   };
 
   public paper3: IPublicationCardsConfig = {
-    cardId: 'paper3',
+    paperId: 'paper3',
     imgUrl: '/kejieli/assets/images/ICRA2019.png',
     title: 'Real-Time Monocular Object-Model Aware Sparse SLAM',
     subtitle: 'International Conference on Robotics and Automation (ICRA) , 2019',
@@ -91,7 +91,7 @@ export class PublicationsComponent implements OnInit {
   };
 
   public paper4: IPublicationCardsConfig = {
-    cardId: 'paper4',
+    paperId: 'paper4',
     imgUrl: '/kejieli/assets/images/ECCV2018.png',
     title: 'Efficient Dense Point Cloud Object Reconstruction using Deformation Vector Fields',
     subtitle: 'European Conference on Computer Vision (ECCV) , 2018',
@@ -109,7 +109,7 @@ export class PublicationsComponent implements OnInit {
     downloadLink: 'https://openaccess.thecvf.com/content_ECCV_2018/papers/Kejie_Li_Efficient_Dense_Point_ECCV_2018_paper.pdf'
   };
   public paper5: IPublicationCardsConfig = {
-    cardId: 'paper5',
+    paperId: 'paper5',
     imgUrl: '/kejieli/assets/images/CVPR2018.png',
     title: 'Unsupervised Learning of Monocular Depth Estimation and Visual Odometry with Deep Feature Reconstruction',
     subtitle: 'Computer Vision and Pattern Recognition (CVPR), 2018',
@@ -132,8 +132,34 @@ export class PublicationsComponent implements OnInit {
     learnMoreLink: 'https://arxiv.org/abs/1803.03893',
     downloadLink: 'https://arxiv.org/pdf/1803.03893.pdf'
   };
+
+  public papers = [this.paper1, this.paper2, this.paper3, this.paper4, this.paper5];
+  public observer: IntersectionObserver;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  ngAfterViewInit(): void {
+    this.observer = new IntersectionObserver(entries => {
+      // tslint:disable-next-line:prefer-for-of
+      for (let i = 0; i < entries.length; i++) {
+        const entry = entries[i];
+        const id = entry.target?.getAttribute('id');
+        if (entry.intersectionRatio > 0) {
+          this.papers.forEach(paper => document.querySelector(`a[id="${paper.paperId}-link"]`)?.classList?.remove('active'));
+          document.querySelector(`a[id="${id}-link"]`)?.classList?.add('active');
+          return;
+        }
+      }
+    });
+
+    document.querySelectorAll('app-publication-list-cards[id] mat-card mat-card-header').forEach((section) => {
+      this.observer.observe(section);
+    });
   }
+
+  ngOnDestroy(): void {
+    this.observer.disconnect();
+  }
+
 }

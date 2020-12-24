@@ -17,33 +17,23 @@
         </div>
         <div id="publication-list-container" *ngIf="group.value === 'list' else grid">
             <div class="list-container">
-                <app-publication-list-cards id='paper1' [cardConfig]="paper1"></app-publication-list-cards>
-                <app-publication-list-cards id='paper2' [cardConfig]="paper2"></app-publication-list-cards>
-                <app-publication-list-cards id='paper3' [cardConfig]="paper3"></app-publication-list-cards>
-                <app-publication-list-cards id='paper4' [cardConfig]="paper4"></app-publication-list-cards>
-                <app-publication-list-cards id='paper5' [cardConfig]="paper5"></app-publication-list-cards>
+                <app-publication-list-cards *ngFor="let paper of papers" [cardConfig]="paper" id='{{paper.paperId}}'></app-publication-list-cards>
             </div>
             <div class="table-of-content-container">
                 <div class="table-of-content docs-toc-container">
                     <div class="docs-toc-heading">Publications List</div>
                     <br>
                     <nav>
-                        <a [routerLink]="['/publications']" fragment="paper1" class="docs-link">{{paper1.title}}</a><br><br>
-                        <a [routerLink]="['/publications']" fragment="paper2" class="docs-link">{{paper2.title}}</a><br><br>
-                        <a [routerLink]="['/publications']" fragment="paper3" class="docs-link">{{paper3.title}}</a><br><br>
-                        <a [routerLink]="['/publications']" fragment="paper4" class="docs-link">{{paper4.title}}</a><br><br>
-                        <a [routerLink]="['/publications']" fragment="paper5" class="docs-link">{{paper5.title}}</a><br><br>
+                        <ng-container *ngFor="let paper of papers">
+                            <a [routerLink]="['/publications']" [fragment]="paper.paperId" id="{{paper.paperId}}-link" class="docs-link">{{paper.title}}</a><br><br>
+                        </ng-container>
                     </nav>
                 </div>
             </div>
         </div>
         <ng-template #grid>
             <div id="publications-cards-container">
-                <app-publication-cards [cardConfig]="paper1"></app-publication-cards>
-                <app-publication-cards [cardConfig]="paper2"></app-publication-cards>
-                <app-publication-cards [cardConfig]="paper3"></app-publication-cards>
-                <app-publication-cards [cardConfig]="paper4"></app-publication-cards>
-                <app-publication-cards [cardConfig]="paper5"></app-publication-cards>
+                <app-publication-cards *ngFor="let paper of papers" [cardConfig]="paper"></app-publication-cards>
             </div>
         </ng-template>
     </div>

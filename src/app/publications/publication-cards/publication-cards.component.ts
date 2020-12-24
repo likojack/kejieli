@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 export interface IPublicationCardsConfig {
-  cardId: string;
+  paperId: string;
   imgUrl: string;
   title: string;
   subtitle: string;
