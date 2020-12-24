@@ -7,9 +7,10 @@
     position: fixed;
     z-index: 999;
 }
-.dot {
-    font-size: xx-large;
+.code {
+    font-size: large;
     color: $highlight-blue;
+    margin-left:10px
 }
 
 .menu-btn {
