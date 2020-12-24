@@ -34,7 +34,7 @@
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: $mob-width) {
     .menu-btn {
         display: none !important;
     }

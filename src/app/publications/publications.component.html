@@ -1,29 +1,50 @@
 <div class="page">
     <div class="profile-pic"></div>
-    <div id="publications-page"  @slide>
+    <div id="publications-page" @slide>
         <h1 id="title" > Publications </h1>
         <mat-divider id="hor-divider"></mat-divider>
     </div>
-   <div style="text-align: center;">
-        <mat-button-toggle-group #group="matButtonToggleGroup" value="list" appearance="legacy">
-            <mat-button-toggle value="list" matTooltip="List View">
-                <mat-icon>view_list</mat-icon>
-            </mat-button-toggle>
-            <mat-button-toggle value="grid" matTooltip="Grid View">
-                <mat-icon>view_module</mat-icon>
-            </mat-button-toggle>
-        </mat-button-toggle-group>
-    </div>
-    <div id="publication-list-container" @slide *ngIf="group.value === 'list' else grid">
-    
-    </div>
-    <ng-template #grid>
-        <div id="publications-cards-container" @slide>
-            <app-publication-cards [cardConfig]="paper1"></app-publication-cards>
-            <app-publication-cards [cardConfig]="paper2"></app-publication-cards>
-            <app-publication-cards [cardConfig]="paper3"></app-publication-cards>
-            <app-publication-cards [cardConfig]="paper4"></app-publication-cards>
-            <app-publication-cards [cardConfig]="paper5"></app-publication-cards>
+    <div @slide>
+        <div style="text-align: center;">
+            <mat-button-toggle-group #group="matButtonToggleGroup" value="list" appearance="legacy">
+                <mat-button-toggle value="list" matTooltip="List View">
+                    <mat-icon>view_list</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="grid" matTooltip="Grid View">
+                    <mat-icon>view_module</mat-icon>
+                </mat-button-toggle>
+            </mat-button-toggle-group>
         </div>
-    </ng-template>
+        <div id="publication-list-container" *ngIf="group.value === 'list' else grid">
+            <div class="list-container">
+                <app-publication-list-cards id='paper1' [cardConfig]="paper1"></app-publication-list-cards>
+                <app-publication-list-cards id='paper2' [cardConfig]="paper2"></app-publication-list-cards>
+                <app-publication-list-cards id='paper3' [cardConfig]="paper3"></app-publication-list-cards>
+                <app-publication-list-cards id='paper4' [cardConfig]="paper4"></app-publication-list-cards>
+                <app-publication-list-cards id='paper5' [cardConfig]="paper5"></app-publication-list-cards>
+            </div>
+            <div class="table-of-content-container">
+                <div class="table-of-content docs-toc-container">
+                    <div class="docs-toc-heading">Publications List</div>
+                    <br>
+                    <nav>
+                        <a href="/publications#paper1" class="docs-link">{{paper1.title}}</a><br><br>
+                        <a href="/publications#paper2" class="docs-link">{{paper2.title}}</a><br><br>
+                        <a href="/publications#paper3" class="docs-link">{{paper3.title}}</a><br><br>
+                        <a href="/publications#paper4" class="docs-link">{{paper4.title}}</a><br><br>
+                        <a href="/publications#paper5" class="docs-link">{{paper5.title}}</a><br><br>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <ng-template #grid>
+            <div id="publications-cards-container">
+                <app-publication-cards [cardConfig]="paper1"></app-publication-cards>
+                <app-publication-cards [cardConfig]="paper2"></app-publication-cards>
+                <app-publication-cards [cardConfig]="paper3"></app-publication-cards>
+                <app-publication-cards [cardConfig]="paper4"></app-publication-cards>
+                <app-publication-cards [cardConfig]="paper5"></app-publication-cards>
+            </div>
+        </ng-template>
+    </div>
 </div>

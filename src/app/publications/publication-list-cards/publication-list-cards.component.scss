@@ -1,0 +1,46 @@
+@import "variables.scss";
+
+.publications-card {
+    padding: 50px 20px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0px rgba(168,168,168,1);
+
+    .card-img {
+        margin: 10px 0px !important;
+        width: 100%;
+        height: 500px;
+        object-fit: scale-down;
+    }
+    .card-header {
+        margin-top: 20px;
+        text-align: left;
+        .author {
+            color: $bg-colour;
+            font-style: italic;
+            font-size: 16px;
+            font-weight: 500;
+            .comma:last-child {
+                display: none;
+            }
+        }
+    }
+    .card-content {
+        font-size: 16px;
+        text-align: justify;
+        margin: 0px 20px;
+    }
+    
+    .card-actions {
+        margin: 10px 0px;
+        text-align: right;
+        color: $highlight-blue;
+        button {
+            font-size: medium;
+        }
+    }
+    .with-link:hover {
+        color: $highlight-blue;
+        cursor: pointer;
+    }
+}

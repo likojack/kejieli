@@ -9,7 +9,7 @@ import { IPublicationCardsConfig } from './publication-cards/publication-cards.c
   animations: [
     trigger('slide', [
       transition('void => *', [
-        style({ opacity: 0, transform: 'translateY(-15%)' }),
+        style({ opacity: 0, transform: 'translateY(-5%)' }),
         animate(1000)
       ]),
       transition('* => void', [
