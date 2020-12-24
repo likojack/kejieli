@@ -140,6 +140,15 @@ export class PublicationsComponent implements OnInit, OnDestroy, AfterViewInit {
   ngOnInit(): void { }
 
   ngAfterViewInit(): void {
+    this.observeIndex();
+  }
+
+  ngOnDestroy(): void {
+    this.stopObserve();
+  }
+
+  observeIndex(): void {
+    if (this.observer) { this.stopObserve(); }
     this.observer = new IntersectionObserver(entries => {
       // tslint:disable-next-line:prefer-for-of
       for (let i = 0; i < entries.length; i++) {
@@ -158,7 +167,7 @@ export class PublicationsComponent implements OnInit, OnDestroy, AfterViewInit {
     });
   }
 
-  ngOnDestroy(): void {
+  stopObserve(): void {
     this.observer.disconnect();
   }
 

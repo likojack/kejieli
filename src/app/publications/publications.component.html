@@ -7,7 +7,7 @@
     <div @slide>
         <div style="text-align: center;">
             <mat-button-toggle-group #group="matButtonToggleGroup" value="list" appearance="legacy">
-                <mat-button-toggle value="list" matTooltip="List View">
+                <mat-button-toggle value="list" matTooltip="List View" (click)="observeIndex();">
                     <mat-icon>view_list</mat-icon>
                 </mat-button-toggle>
                 <mat-button-toggle value="grid" matTooltip="Grid View">
