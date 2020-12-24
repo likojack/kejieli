@@ -29,7 +29,7 @@
     align-items: flex-start;
     app-publication-cards {
         width: 30%;
-        min-width: 300px;
+        min-width: 350px;
         margin: 50px 0px;
         border-radius: 10px;
         box-shadow: 2px 2px 5px 0px rgba(168,168,168,1);
@@ -100,6 +100,12 @@
             padding-left: unset;
             position: unset;
             margin-bottom: 50px;
+        }
+    }
+
+    #publications-cards-container {
+        app-publication-cards {
+            width: 90%;
         }
     }
 }
