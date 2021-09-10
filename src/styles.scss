@@ -49,3 +49,54 @@ body { margin: 0; font-family: $font-family !important; overflow-x: hidden;}
         position: relative;
     }
 }
+
+.shake {
+    -webkit-animation: shake 1.5s forwards; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: shake 1.5s forwards; /* Firefox < 16 */
+   -ms-animation: shake 1.5s forwards; /* Internet Explorer */
+    -o-animation: shake 1.5s forwards; /* Opera < 12.1 */
+       animation: shake 1.5s forwards; 
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0);}
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0);}
+    40%, 60% { transform: translate3d(4px, 0, 0);}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0);}
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0);}
+    40%, 60% { transform: translate3d(4px, 0, 0);}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0);}
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0);}
+    40%, 60% { transform: translate3d(4px, 0, 0);}
+}
+
+/* Internet Explorer */
+@-ms-keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0);}
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0);}
+    40%, 60% { transform: translate3d(4px, 0, 0);}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0);}
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0);}
+    40%, 60% { transform: translate3d(4px, 0, 0);}
+}
+
+
+

@@ -1,0 +1,94 @@
+@import "variables.scss";
+
+.odam-heading {
+    position: relative;
+    color: white;
+    top: 100px;
+    text-align: center;
+    background-color: #222222;
+    margin-bottom: 180px;
+    .title {
+        font-size: 70px;
+        font-weight: bolder;
+    }
+    .sub-title {
+        font-size: 20px;
+        margin-top: 40px;
+    }
+    .note {
+        font-size: 20px;
+        font-style: italic;
+        margin-top: 10px;
+        span {
+            position: relative;
+            top: 4px;
+        }
+    }
+}
+
+.odam-section {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    min-width: 300px;
+    text-align: center;
+    #title {
+        font-size: xx-large;
+    }
+    #hor-divider {
+        margin: 20px auto;
+        border-top-color: $highlight-blue;
+        border-top-width: 3px;
+        border-top-style: solid;
+        max-width: 300px;
+    }
+    .odam-author {
+        font-style: italic;
+        font-weight: 500;
+        max-width: 850px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        .author {
+            margin: 10px;
+            width: 200px;
+        }
+        .with-link:hover {
+            color: $highlight-blue;
+            cursor: pointer;
+        }
+    }
+}
+
+.odam-links {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    .link {
+        margin: 10px;
+        cursor: pointer;
+        button {
+            color: rgba(0,0,0,.87);
+            background-color: transparent;
+            font-size: 40px;
+            width: 60px;
+            height: 60px;
+            transition: all 0.2s ease-in-out;
+        }
+        button:hover {
+            color: $highlight-blue;
+            transform: scale(1.1);
+        }
+        div {
+            font-weight: bold;
+        }
+    }
+}

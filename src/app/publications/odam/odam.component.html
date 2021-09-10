@@ -1,1 +1,44 @@
-<p>odam works!</p>
+<div class="page">
+    <div class="odam-heading">
+        <div class="title"> ODAM </div>
+        <div class="sub-title"> Object Detection, Association, and Mapping using Posed RGB Video </div>
+        <div class="note"> ~ <span class="material-icons"> military_tech </span>ICCV 2021 Oral ~ </div>
+    </div>
+    <div class="odam-section" @slide>
+        <h1 id="title"> Authors </h1>
+        <mat-divider id="hor-divider"></mat-divider>
+        <div class="odam-author">
+            <ng-container *ngFor="let author of authors">
+                <div class="author">
+                    <div (click)="goToLink(author.link)" [class.with-link]="author.link"> <b>{{author.name}}</b> </div>
+                    <mat-divider></mat-divider>
+                    <div>{{author.institution}}</div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="odam-section" @slide>
+        <h1 id="title"> Links </h1>
+        <mat-divider id="hor-divider"></mat-divider>
+        <div class="odam-links">
+            <div class="link" (click)="goToLink('')">
+                <button mat-icon-button >
+                    <fa-icon [icon]="faGithub"></fa-icon>
+                </button>
+                <div>Code</div>
+            </div>
+            <div class="link" (click)="goToLink('')">
+                <button mat-icon-button >
+                    <fa-icon [icon]="faYoutube"></fa-icon>
+                </button>
+                <div>Video</div>
+            </div>
+            <div class="link" (click)="goToLink('')">
+                <button mat-icon-button >
+                    <fa-icon [icon]="faScroll"></fa-icon>
+                </button>
+                <div>Paper</div>
+            </div>
+        </div>
+    </div>
+</div>
