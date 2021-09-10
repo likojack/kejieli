@@ -16,6 +16,11 @@ export default class Constants {
   public static TRUNG_PHAM = { name: 'Trung Pham', link: 'http://trungtpham.github.io/' };
   public static HUANGYING_ZHAN = { name: 'Huangying Zhan', link: 'http://huangying-zhan.github.io/' };
   public static SAROJ = { name: 'Chamara Saroj Weerasekera', link: 'https://www.roboticvision.org/rv_person/saroj-weerasekera/' };
+  public static HAMID = { name: 'Hamid Rezatofighi', link: 'https://research.monash.edu/en/persons/hamid-rezatofighi/' };
+  public static DANIEL_DETONE = { name: 'Daniel DeTone', link: 'https://scholar.google.com/citations?user=FrQGs28AAAAJ&hl=en' };
+  public static STEVEN_CHEN = { name: 'Steven Chen', link: 'https://www.linkedin.com/in/steven-chen-a9baa562' };
+  public static MINH_VO = { name: 'Minh Vo', link: 'https://scholar.google.com/citations?user=H4g_IKkAAAAJ&hl=en' };
+  public static CHRIS_SWEENEY = { name: 'Chris Sweeney', link: 'https://scholar.google.com/citations?user=h-CpQGgAAAAJ&hl=en' };
   public static HARSH_AGARWAL = { name: 'Harsh Agarwal', link: null };
 
 }

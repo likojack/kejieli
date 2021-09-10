@@ -19,8 +19,49 @@ import { IPublicationCardsConfig } from './publication-cards/publication-cards.c
   ]
 })
 export class PublicationsComponent implements OnInit, OnDestroy, AfterViewInit {
-  public paper1: IPublicationCardsConfig = {
-    paperId: 'paper1',
+  public paper7: IPublicationCardsConfig = {
+    paperId: 'paper7',
+    imgUrl: '/kejieli/assets/images/ICCV2021.png',
+    title: 'ODAM: Object Detection, Association, and Mapping using Posed RGB Video',
+    subtitle: 'International Conference on Computer Vision (ICCV) , 2021',
+    authors: [
+      { self: true, name: 'Kejie Li *' }, Constants.DANIEL_DETONE, Constants.STEVEN_CHEN, Constants.MINH_VO,
+      Constants.IAN_REID, Constants.HAMID, Constants.CHRIS_SWEENEY, Constants.JULIAN_STRAUB, Constants.RICHARD_NEWCOMBE
+    ],
+    content: `Localizing objects and estimating their extent in 3D is an important step towards high-level 3D scene understanding,
+              which has many applications in Augmented Reality and Robotics. We present ODAM, a system for 3D Object Detection, Association,
+              and Mapping using posed RGB videos. The proposed system relies on a deep learning front-end to detect 3D objects
+              from a given RGB frame and associate them to a global object-based map using a graph neural network (GNN).
+              Based on these frame-to-model associations, our back-end optimizes object bounding volumes, represented as super-quadrics,
+              under multi-view geometry constraints and the object scale prior. We validate the proposed system on ScanNet where we show a significant
+              improvement over existing RGB-only methods.`,
+    learnMoreLink: 'https://arxiv.org/abs/2108.10165',
+    downloadLink: 'https://arxiv.org/pdf/2108.10165.pdf'
+  };
+  public paper6: IPublicationCardsConfig = {
+    paperId: 'paper6',
+    imgUrl: '/kejieli/assets/images/ICRA2021.png',
+    title: 'MOLTR: Multiple Object Localisation, Tracking and Reconstruction from Monocular RGB Videos',
+    subtitle: 'International Conference on Robotics and Automation (ICRA) , 2021',
+    authors: [
+      { self: true, name: 'Kejie Li *' }, Constants.HAMID, Constants.IAN_REID
+    ],
+    content: `Semantic aware reconstruction is more advantageous than geometric-only reconstruction for future robotic
+    and AR/VR applications because it represents not only where things are, but also what things are. Object-centric mapping
+    is a task to build an object-level reconstruction where objects are separate and meaningful entities that convey both geometry
+    and semantic information. In this paper, we present MOLTR, a solution to object-centric mapping using only
+    monocular image sequences and camera poses. It is able to localise, track, and reconstruct multiple objects
+    in an online fashion when an RGB camera captures a video of the surrounding. Given a new RGB frame, MOLTR firstly applies
+    a monocular 3D detector to localise objects of interest and extract their shape codes that represent the object shapes in a
+    learned embedding space. Detections are then merged to existing objects in the map after data association. Motion state
+    (i.e. kinematics and the motion status) of each object is tracked by a multiple model Bayesian filter and object shape is
+    progressively refined by fusing multiple shape code. We evaluate localisation, tracking, and reconstruction on benchmarking datasets
+    for indoor and outdoor scenes, and show superior performance over previous approaches.`,
+    learnMoreLink: 'https://arxiv.org/abs/2012.05360',
+    downloadLink: 'https://arxiv.org/pdf/2012.05360.pdf'
+  };
+  public paper5: IPublicationCardsConfig = {
+    paperId: 'paper5',
     imgUrl: '/kejieli/assets/images/CVPR2020.png',
     title: 'FroDO: From Detections to 3D Objects',
     subtitle: 'Computer Vision and Pattern Recognition (CVPR), 2020',
@@ -52,8 +93,8 @@ export class PublicationsComponent implements OnInit, OnDestroy, AfterViewInit {
     downloadLink: 'https://arxiv.org/pdf/2005.05125.pdf'
   };
 
-  public paper2: IPublicationCardsConfig = {
-    paperId: 'paper2',
+  public paper4: IPublicationCardsConfig = {
+    paperId: 'paper4',
     imgUrl: '/kejieli/assets/images/BMVC2019.png',
     title: 'Single-view Object Shape Reconstruction Using Deep Shape Prior and Silhouette',
     subtitle: 'British Machine Vision Conference (BMVC), 2019 ',
@@ -90,8 +131,8 @@ export class PublicationsComponent implements OnInit, OnDestroy, AfterViewInit {
     downloadLink: 'https://arxiv.org/pdf/1809.09149.pdf'
   };
 
-  public paper4: IPublicationCardsConfig = {
-    paperId: 'paper4',
+  public paper2: IPublicationCardsConfig = {
+    paperId: 'paper2',
     imgUrl: '/kejieli/assets/images/ECCV2018.png',
     title: 'Efficient Dense Point Cloud Object Reconstruction using Deformation Vector Fields',
     subtitle: 'European Conference on Computer Vision (ECCV) , 2018',
@@ -108,8 +149,8 @@ export class PublicationsComponent implements OnInit, OnDestroy, AfterViewInit {
     learnMoreLink: 'https://openaccess.thecvf.com/content_ECCV_2018/html/Kejie_Li_Efficient_Dense_Point_ECCV_2018_paper.html',
     downloadLink: 'https://openaccess.thecvf.com/content_ECCV_2018/papers/Kejie_Li_Efficient_Dense_Point_ECCV_2018_paper.pdf'
   };
-  public paper5: IPublicationCardsConfig = {
-    paperId: 'paper5',
+  public paper1: IPublicationCardsConfig = {
+    paperId: 'paper1',
     imgUrl: '/kejieli/assets/images/CVPR2018.png',
     title: 'Unsupervised Learning of Monocular Depth Estimation and Visual Odometry with Deep Feature Reconstruction',
     subtitle: 'Computer Vision and Pattern Recognition (CVPR), 2018',
@@ -133,7 +174,7 @@ export class PublicationsComponent implements OnInit, OnDestroy, AfterViewInit {
     downloadLink: 'https://arxiv.org/pdf/1803.03893.pdf'
   };
 
-  public papers = [this.paper1, this.paper2, this.paper3, this.paper4, this.paper5];
+  public papers = [this.paper7, this.paper6, this.paper5, this.paper4, this.paper3, this.paper2, this.paper1];
   public observer: IntersectionObserver;
   constructor() { }
 
