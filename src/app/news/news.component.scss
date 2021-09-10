@@ -23,7 +23,7 @@
 #news-timeline-card {
     width: 50vw;
     min-width: 300px;
-    margin: 50px auto;
+    margin: 0px auto;
     .timeline {
         list-style: none;
         padding: 20px;
@@ -41,6 +41,7 @@
         .timeline-item {
             margin-bottom: 20px;
             position: relative;
+            height: 150px;
             &:before,
             &:after {
             content: "";

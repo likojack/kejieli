@@ -11,7 +11,7 @@
             <button disabled mat-icon-button class="my-icons" (click)="goToLink('')" matTooltip="GitHub"><fa-icon [icon]="faGithub"></fa-icon></button>
         </div>
         <mat-divider id="divider"></mat-divider>
-        <h4> I am a postdoctoral researcher at the University of Oxford working with Professor <b (click)="goToLink('https://www.robots.ox.ac.uk/~phst/')" class="with-link">Philip Torr</b> 
+        <h4> I am a postdoctoral researcher at the University of Oxford working with Professor <b (click)="goToLink('https://torrvision.com/')" class="with-link">Philip Torr</b> 
         and Professor <b (click)="goToLink('https://www.robots.ox.ac.uk/~victor/')" class="with-link">Victor Prisacariu</b>. 
         Prior to this, I received my PhD at the University of Adelaide under the supervision of Professor <b (click)="goToLink('https://cs.adelaide.edu.au/~ianr/')" class="with-link">Ian Reid</b>.
         I was affiliated with <b (click)="goToLink('https://www.roboticvision.org')" class="with-link">Australian Centre for
@@ -27,18 +27,39 @@
         <ul class="timeline">
             <li class="timeline-item">
                 <div class="timeline-badge">
+                    <fa-icon [icon]="faBriefcase" style="font-size: xx-large;"></fa-icon>
+                </div>
+                <div class="timeline-panel-left">
+                    <div class="timeline-heading">
+                        <p>
+                            <span class="timeline-time">Feb 2021 - Present</span>
+                            <span class="timeline-title">Post Doctoral Researcher</span>
+                        </p>
+                        <p class="timeline-subtitle">University of Oxford</p>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Working under the supervision of Prof. Philip Torr and Prof. Victor Adrian Prisacariu on high-quality reconstruction
+                        using vision sensors.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-badge">
                     <fa-icon [icon]="faFacebook" style="font-size: xx-large;"></fa-icon>
                 </div>
                 <div class="timeline-panel-left">
                     <div class="timeline-heading">
                         <p>
-                            <span class="timeline-time">September 2019 - February 2020</span>
-                            <span class="timeline-title">Research Intern</span>
+                            <span class="timeline-time">September 2019 - 2021</span>
+                            <span class="timeline-title">Research Intern & Collaborator</span>
                         </p>
                         <p class="timeline-subtitle">Facebook Reality Lab</p>
                     </div>
                     <div class="timeline-body">
-                        <p>Publication to be disclosed</p>
+                        <p>My internship at Facebook Reality Lab Research (FRLR) led to FroDO, a research paper published at CVPR 2020 describing a
+                        novel framework for object-oriented mapping.</p>
+                        <p>Shortly after my internship, I continued to collaborate with FRLR on
+                        object-oriented mapping concluded by ODAM, accepted at ICCV 2021 as oral.</p>
                     </div>
                 </div>
             </li>
@@ -67,7 +88,7 @@
                 <div class="timeline-panel-right">
                     <div class="timeline-heading">
                         <p>
-                            <span class="timeline-time">February 2017 - Present</span>
+                            <span class="timeline-time">February 2017 - July 2021</span>
                             <span class="timeline-title">Doctor of Philosophy</span>
                         </p>
                         <p class="timeline-subtitle">University of Adelaide</p>

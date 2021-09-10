@@ -24,6 +24,7 @@ export class NewsComponent implements OnInit {
   public faScroll = solid.faScroll;
   public faBriefcase = solid.faBriefcase;
   public faFacebook = brands.faFacebookSquare;
+  public faGraduationCap = solid.faGraduationCap;
 
   constructor() { }
 
