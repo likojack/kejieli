@@ -7,14 +7,14 @@
         <button mat-menu-item class="mat-menu-btn" [routerLink]="['/home']" > HOME </button>
         <button mat-menu-item class="mat-menu-btn" [routerLink]="['/about']" > ABOUT ME </button>
         <button mat-menu-item class="mat-menu-btn" [routerLink]="['/news']" > NEWS </button>
-        <button mat-menu-item class="mat-menu-btn" [routerLink]="['/publications']" > PUBLICATIONS </button>
+        <button mat-menu-item class="mat-menu-btn" [routerLink]="['/publications']"> <span matBadge="1" matBadgeOverlap="false" matBadgeColor="warn">PUBLICATIONS</span></button>
         <button mat-menu-item class="mat-menu-btn" [routerLink]="['/professional-activities']" > PROFESSIONAL ACTIVITIES </button>
         <button mat-menu-item class="mat-menu-btn" [routerLink]="['/contact']" > CONTACT ME</button>
     </mat-menu>
     <button mat-button [disableRipple]="true" class="menu-btn" [routerLinkActive]="'underline'" [routerLink]="['/home']"> <span class="menu-btn-text"> HOME </span></button>
     <button mat-button [disableRipple]="true" class="menu-btn" [routerLinkActive]="'underline'" [routerLink]="['/about']"> <span class="menu-btn-text"> ABOUT ME </span></button>
     <button mat-button [disableRipple]="true" class="menu-btn" [routerLinkActive]="'underline'" [routerLink]="['/news']"> <span class="menu-btn-text"> NEWS </span></button>
-    <button mat-button [disableRipple]="true" class="menu-btn" [routerLinkActive]="'underline'" [routerLink]="['/publications']"> <span class="menu-btn-text"> PUBLICATIONS </span></button>
+    <button mat-button [disableRipple]="true" class="menu-btn" [routerLinkActive]="'underline'" [routerLink]="['/publications']"> <span class="menu-btn-text" matBadge="1" matBadgeOverlap="false" matBadgeColor="warn"> PUBLICATIONS </span></button>
     <button mat-button [disableRipple]="true" class="menu-btn" [routerLinkActive]="'underline'" [routerLink]="['/professional-activities']"> <span class="menu-btn-text"> PROFESSIONAL ACTIVITIES </span></button>
     <button mat-button [disableRipple]="true" class="menu-btn" [routerLinkActive]="'underline'" [routerLink]="['/contact']"> <span class="menu-btn-text"> CONTACT ME</span></button>
 </mat-toolbar>
