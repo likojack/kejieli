@@ -35,7 +35,7 @@ export class PublicationsComponent implements OnInit, OnDestroy, AfterViewInit {
               Based on these frame-to-model associations, our back-end optimizes object bounding volumes, represented as super-quadrics,
               under multi-view geometry constraints and the object scale prior. We validate the proposed system on ScanNet where we show a significant
               improvement over existing RGB-only methods.`,
-    learnMoreLink: 'https://arxiv.org/abs/2108.10165',
+    projectWebsiteLink: '/publications/odam',
     downloadLink: 'https://arxiv.org/pdf/2108.10165.pdf'
   };
   public paper6: IPublicationCardsConfig = {

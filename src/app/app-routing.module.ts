@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
 import { ProfessionalActivitiesComponent } from './professional-activities/professional-activities.component';
+import { OdamComponent } from './publications/odam/odam.component';
 import { PublicationsComponent } from './publications/publications.component';
 
 const routes: Routes = [
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'publications',
     component: PublicationsComponent
+  },
+  {
+    path: 'publications/odam',
+    component: OdamComponent
   },
   {
     path: 'professional-activities',

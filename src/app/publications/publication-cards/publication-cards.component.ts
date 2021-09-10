@@ -11,7 +11,8 @@ export interface IPublicationCardsConfig {
     link?: string,
   } [];
   content: string;
-  learnMoreLink: string;
+  projectWebsiteLink?: string;
+  learnMoreLink?: string;
   downloadLink: string;
 }
 

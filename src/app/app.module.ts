@@ -16,6 +16,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PublicationCardsComponent } from './publications/publication-cards/publication-cards.component';
 import { PublicationListCardsComponent } from './publications/publication-list-cards/publication-list-cards.component';
+import { OdamComponent } from './publications/odam/odam.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PublicationListCardsComponent } from './publications/publication-list-c
     ProfessionalActivitiesComponent,
     ContactComponent,
     PublicationCardsComponent,
-    PublicationListCardsComponent
+    PublicationListCardsComponent,
+    OdamComponent
   ],
   imports: [
     BrowserModule,
