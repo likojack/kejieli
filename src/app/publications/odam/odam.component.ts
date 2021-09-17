@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import Constants from 'src/app/Constants';
 import { trigger, style, animate, transition } from '@angular/animations';
 import * as brands from '@fortawesome/free-brands-svg-icons';
@@ -29,6 +29,8 @@ export class OdamComponent implements OnInit {
     Constants.KEJIE_LI, Constants.DANIEL_DETONE, Constants.STEVEN_CHEN, Constants.MINH_VO,
     Constants.IAN_REID, Constants.HAMID, Constants.CHRIS_SWEENEY, Constants.JULIAN_STRAUB, Constants.RICHARD_NEWCOMBE
   ];
+  @ViewChild('videoPlayer') videoPlayer: ElementRef;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -36,5 +38,9 @@ export class OdamComponent implements OnInit {
 
   public goToLink(url: string): void {
     if (url) { window.open(url, '_blank'); }
+  }
+
+  public toggleVideo(): void {
+    this.videoPlayer?.nativeElement?.paused ? this.videoPlayer?.nativeElement?.play() : this.videoPlayer?.nativeElement?.pause();
   }
 }

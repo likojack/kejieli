@@ -1,8 +1,8 @@
   // tslint:disable:max-line-length
 
 export default class Constants {
-  public static KEJIE_LI = { name: 'Kejie Li', link: 'https://likojack.github.io/kejieli', institution: 'University Of Adelaide' };
-  public static IAN_REID = { name: 'Ian Reid', link: 'https://cs.adelaide.edu.au/~ianr/', institution: 'University Of Adelaide' };
+  public static KEJIE_LI = { name: 'Kejie Li', link: 'https://likojack.github.io/kejieli', institution: 'University of Adelaide' };
+  public static IAN_REID = { name: 'Ian Reid', link: 'https://cs.adelaide.edu.au/~ianr/', institution: 'University of Adelaide' };
   public static MARTIN_RUNZ = { name: 'Martin Rünz *', link: 'https://www.martinruenz.de/' };
   public static MENG_TANT = { name: 'Meng Tang', link: 'http://mengtang.org/' };
   public static LINGNI_MA = { name: 'Lingni Ma', link: 'https://scholar.google.nl/citations?user=eUAgpwkAAAAJ&hl=en' };
