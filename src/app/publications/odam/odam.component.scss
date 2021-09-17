@@ -125,7 +125,9 @@
 
 .odam-results {
     img {
-        width: 700px;
+        max-width: 100%;
+        width: 700px; 
+        height: auto;
         margin: 2px 3px;
     }
     & + .caption {
