@@ -25,6 +25,24 @@
         </div>
     </div>
     <div class="odam-section" @slide>
+        <h1 id="title"> Links </h1>
+        <mat-divider id="hor-divider"></mat-divider>
+        <div class="odam-links">
+            <div class="link link-disabled" (click)="goToLink('')">
+                <button mat-icon-button>
+                    <fa-icon [icon]="faGithub"></fa-icon>
+                </button>
+                <div>Code</div>
+            </div>
+            <div class="link" (click)="goToLink('https://arxiv.org/pdf/2108.10165.pdf')">
+                <button mat-icon-button>
+                    <fa-icon [icon]="faScroll"></fa-icon>
+                </button>
+                <div>Paper</div>
+            </div>
+        </div>
+    </div>
+    <div class="odam-section" @slide>
         <h1 id="title"> Abstract </h1>
         <mat-divider id="hor-divider"></mat-divider>
         <div class="odam-abstract">
@@ -46,21 +64,23 @@
         </div>
     </div>
     <div class="odam-section" @slide>
-        <h1 id="title"> Links </h1>
+        <h1 id="title"> Results </h1>
         <mat-divider id="hor-divider"></mat-divider>
-        <div class="odam-links">
-            <div class="link link-disabled" (click)="goToLink('')">
-                <button mat-icon-button>
-                    <fa-icon [icon]="faGithub"></fa-icon>
-                </button>
-                <div>Code</div>
+        <div class="odam-results">
+            <div>
+                <img src="/assets/images/ODAM1.gif" />
+                <img src="/assets/images/ODAM2.gif" />
             </div>
-            <div class="link" (click)="goToLink('https://arxiv.org/pdf/2108.10165.pdf')">
-                <button mat-icon-button>
-                    <fa-icon [icon]="faScroll"></fa-icon>
-                </button>
-                <div>Paper</div>
+            <div>
+                <img src="/assets/images/ODAM3.gif" />
+                <img src="/assets/images/ODAM4.gif" />
             </div>
         </div>
+        <div class="caption">
+            In each figure, the left column shows original meshes for visualization purpose only, and the right column shows the 3D detections represented by super-quadrics.
+        </div>
     </div>
+    <br>
+    <br>
+    <br>
 </div>

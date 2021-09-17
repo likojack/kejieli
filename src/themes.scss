@@ -9,6 +9,19 @@
 // @include angular-material-theme($my-app-theme);
 
 $custom-typography: mat-typography-config(
-  $font-family: $font-family
+  $font-family: $font-family,
+  $display-4:     mat-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
+  $display-3:     mat-typography-level(56px, 56px, 300, $letter-spacing: -0.02em),
+  $display-2:     mat-typography-level(45px, 48px, 300, $letter-spacing: -0.005em),
+  $display-1:     mat-typography-level(34px, 40px, 300),
+  $headline:      mat-typography-level(24px, 32px, 300),
+  $title:         mat-typography-level(20px, 32px, 400),
+  $subheading-2:  mat-typography-level(16px, 28px, 300),
+  $subheading-1:  mat-typography-level(15px, 24px, 300),
+  $body-2:        mat-typography-level(14px, 24px, 400),
+  $body-1:        mat-typography-level(14px, 20px, 300),
+  $caption:       mat-typography-level(12px, 20px, 300),
+  $button:        mat-typography-level(14px, 14px, 400),
+  $input:         mat-typography-level(inherit, 1.125, 300)
 );
 @include mat-core($custom-typography);
