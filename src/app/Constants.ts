@@ -25,6 +25,11 @@ export default class Constants {
   public static MINH_VO = { name: 'Minh Vo', link: 'https://scholar.google.com/citations?user=H4g_IKkAAAAJ&hl=en', institution: 'Facebook Reality Labs Research' };
   public static CHRIS_SWEENEY = { name: 'Chris Sweeney', link: 'https://scholar.google.com/citations?user=h-CpQGgAAAAJ&hl=en', institution: 'Facebook Reality Labs Research' };
   public static HARSH_AGARWAL = { name: 'Harsh Agarwal', link: null };
+  public static WENJING_BIAN = { name: 'Wenjing Bian', link: 'https://www.linkedin.com/in/wenjing-bian-02932714a/?originalSubdomain=uk' };
+  public static ZIRUI_WANG = { name: 'Zirui Wang', link: 'https://scholar.google.com/citations?user=zCBKqa8AAAAJ&hl=en' };
+  public static VICTOR = { name: 'Victor Adrian Prisacariu', link: 'https://www.robots.ox.ac.uk/~victor/' };
+  public static YANSONG_TANG = { name: 'Yansong Tang', link: 'https://scholar.google.com/citations?user=TIbistUAAAAJ&hl=en' };
+  public static TORR = { name: 'Philip H.S. Torr', link: 'https://torrvision.com' };
 
 }
 

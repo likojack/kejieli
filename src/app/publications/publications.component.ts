@@ -19,6 +19,40 @@ import { IPublicationCardsConfig } from './publication-cards/publication-cards.c
   ]
 })
 export class PublicationsComponent implements OnInit, OnDestroy, AfterViewInit {
+  public paper9: IPublicationCardsConfig = {
+    paperId: 'paper9',
+    imgUrl: '/kejieli/assets/images/CVPR2022.png',
+    title: 'BNV-Fusion: Dense 3D Reconstruction using Bi-level Neural Volume Fusion',
+    subtitle: 'Computer Vision and Pattern Recognition (CVPR), 2022',
+    authors: [
+      { self: true, name: 'Kejie Li *' }, Constants.YANSONG_TANG, Constants.VICTOR, Constants.TORR
+    ],
+    content: `Dense 3D reconstruction from a stream of depth images is the key to many mixed reality and robotic applications.
+    Although methods based on Truncated Signed Distance Function (TSDF) Fusion have advanced the field over the years,
+    the TSDF volume representation is confronted with striking a balance between the robustness to noisy measurements and maintaining the level of detail.
+    We present Bi-level Neural Volume Fusion (BNV-Fusion), which leverages recent advances in neural implicit representations and neural rendering for dense 3D reconstruction.
+    In order to incrementally integrate new depth maps into a global neural implicit representation, we propose a novel bi-level fusion strategy that considers both efficiency and reconstruction quality by design.
+    We evaluate the proposed method on multiple datasets quantitatively and qualitatively, demonstrating a significant improvement over existing methods.`,
+    learnMoreLink: 'TODO',
+    downloadLink: 'TODO'
+  };
+  public paper8: IPublicationCardsConfig = {
+    paperId: 'paper8',
+    imgUrl: '/kejieli/assets/images/BMVC2021.png',
+    title: 'Ray-ONet: Efficient 3D Reconstruction From A Single RGB Image',
+    subtitle: 'British Machine Vision Conference (BMVC), 2021',
+    authors: [
+      Constants.WENJING_BIAN, Constants.ZIRUI_WANG, { self: true, name: 'Kejie Li *' }, Constants.VICTOR
+    ],
+    content: `We propose Ray-ONet to reconstruct detailed 3D models from monocular images efficiently.
+    By predicting a series of occupancy probabilities along a ray that is back-projected from a pixel in the camera coordinate,
+    our method Ray-ONet improves the reconstruction accuracy in comparison with Occupancy Networks (ONet),
+    while reducing the network inference complexity to O(N2).
+    As a result, Ray-ONet achieves state-of-the-art performance on the ShapeNet benchmark with more than 20× speed-up
+    at 128 resolution and maintains a similar memory footprint during inference.`,
+    learnMoreLink: 'https://arxiv.org/abs/2107.01899',
+    downloadLink: 'https://arxiv.org/pdf/2107.01899.pdf'
+  };
   public paper7: IPublicationCardsConfig = {
     paperId: 'paper7',
     imgUrl: '/kejieli/assets/images/ICCV2021.png',
@@ -174,7 +208,7 @@ export class PublicationsComponent implements OnInit, OnDestroy, AfterViewInit {
     downloadLink: 'https://arxiv.org/pdf/1803.03893.pdf'
   };
 
-  public papers = [this.paper7, this.paper6, this.paper5, this.paper4, this.paper3, this.paper2, this.paper1];
+  public papers = [this.paper9, this.paper8, this.paper7, this.paper6, this.paper5, this.paper4, this.paper3, this.paper2, this.paper1];
   public observer: IntersectionObserver;
   constructor() { }
 
