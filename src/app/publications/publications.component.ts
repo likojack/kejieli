@@ -33,8 +33,8 @@ export class PublicationsComponent implements OnInit, OnDestroy, AfterViewInit {
     We present Bi-level Neural Volume Fusion (BNV-Fusion), which leverages recent advances in neural implicit representations and neural rendering for dense 3D reconstruction.
     In order to incrementally integrate new depth maps into a global neural implicit representation, we propose a novel bi-level fusion strategy that considers both efficiency and reconstruction quality by design.
     We evaluate the proposed method on multiple datasets quantitatively and qualitatively, demonstrating a significant improvement over existing methods.`,
-    learnMoreLink: 'TODO',
-    downloadLink: 'TODO'
+    learnMoreLink: 'https://arxiv.org/abs/2204.01139',
+    downloadLink: 'https://arxiv.org/abs/2204.01139.pdf'
   };
   public paper8: IPublicationCardsConfig = {
     paperId: 'paper8',
