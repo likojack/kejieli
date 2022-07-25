@@ -33,8 +33,9 @@ export class PublicationsComponent implements OnInit, OnDestroy, AfterViewInit {
     We present Bi-level Neural Volume Fusion (BNV-Fusion), which leverages recent advances in neural implicit representations and neural rendering for dense 3D reconstruction.
     In order to incrementally integrate new depth maps into a global neural implicit representation, we propose a novel bi-level fusion strategy that considers both efficiency and reconstruction quality by design.
     We evaluate the proposed method on multiple datasets quantitatively and qualitatively, demonstrating a significant improvement over existing methods.`,
-    learnMoreLink: 'https://arxiv.org/abs/2204.01139',
-    downloadLink: 'https://arxiv.org/abs/2204.01139.pdf'
+    learnMoreLink: 'https://github.com/likojack/bnv_fusion',
+    learnMoreLabel: 'GITHUB',
+    downloadLink: 'https://arxiv.org/pdf/2204.01139.pdf'
   };
   public paper8: IPublicationCardsConfig = {
     paperId: 'paper8',
@@ -50,7 +51,8 @@ export class PublicationsComponent implements OnInit, OnDestroy, AfterViewInit {
     while reducing the network inference complexity to O(N2).
     As a result, Ray-ONet achieves state-of-the-art performance on the ShapeNet benchmark with more than 20× speed-up
     at 128 resolution and maintains a similar memory footprint during inference.`,
-    learnMoreLink: 'https://arxiv.org/abs/2107.01899',
+    learnMoreLink: 'https://github.com/ActiveVisionLab/ray-onet',
+    learnMoreLabel: 'GITHUB',
     downloadLink: 'https://arxiv.org/pdf/2107.01899.pdf'
   };
   public paper7: IPublicationCardsConfig = {

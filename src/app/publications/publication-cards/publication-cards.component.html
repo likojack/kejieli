@@ -17,7 +17,7 @@
         <p>{{cardConfig.content}}</p>
     </mat-card-content>
     <mat-card-actions class="card-actions">
-        <button mat-button *ngIf="cardConfig.learnMoreLink" (click)="goToLink(cardConfig.learnMoreLink)">LEARN MORE</button>
+        <button mat-button *ngIf="cardConfig.learnMoreLink" (click)="goToLink(cardConfig.learnMoreLink)">{{ cardConfig.learnMoreLabel || 'LEARN MORE' }}</button>
         <button mat-button *ngIf="cardConfig.projectWebsiteLink" [routerLink]="cardConfig.projectWebsiteLink" class="shake">PROJECT WEBSITE</button>
         <button mat-button (click)="goToLink(cardConfig.downloadLink)">DOWNLOAD</button>
     </mat-card-actions>
